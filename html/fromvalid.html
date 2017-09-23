@@ -1,0 +1,44 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>FormValidation</title>
+</head>
+<link rel="stylesheet" type="text/css" href="Form.css">
+<script type="text/javascript">
+var x;
+var y;
+var z;
+function valid(){
+
+x=document.forms["myform"]["Name"].value;
+!x.match("^[a-zA-Z\(\)]+$");
+document.getElementById('errorname2').style.dispaly='block';
+
+y=document.getElementById('second').value;
+if (isNan(y) || y< 1|| y >10 ) {
+	document.getElementById('shownumerror').style.dispaly='block';
+}
+y=document.forms["myform"]["Lname"].value;
+if(z==""){
+	document.getElementById('errorname2').style.dispaly='block';
+}
+
+}
+
+</script>
+<body>
+<div class="outer-layout">
+<form name="myform" onsubmit="valid()"  method="post">
+<div class="new-form">
+<input id="first"type="text" name="Name" placeholder="Name"> 
+<p id="errorinname">enter only alphabets</p>
+<input id="second"type="number" placeholder="Number">
+<p id="shownumerror">enter lessthan 10 numbers</p>
+<input id=""type="text" name="Lname" placeholder="Name2">
+<p id="errorname2">field must be filled</p>
+<input type="submit" value="submit">
+</div>
+</from>
+</div>
+</body>
+</html>
