@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding-top: 12px;
+        }
+        li{
+            display: inline;
+            padding: 12px;
+            cursor:  pointer;
+            }
+            .sub-main{
+                background-color: lightgray;
+                color: black;
+                height: 42px;
+            }
+            li:hover{
+                background-color: gray;
+            }
+            /*<#mylink{
+                 display: none;
+             }   */
+
+    </style>    
+</head>
+<body>
+    <div class="main">
+        <div class="sub-main"> 
+            <ul>
+                <li name="link" onclick="opentab('Home')" > Home </li>
+                <li name="link" onclick="opentab('ContactUs')"> ContactUs </li>   
+                <li name="link" onclick="opentab('AboutUs')"> AboutUs </li>      
+            </ul>
+    </div>  
+    <div> 
+        <p id="Home" class="home">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
+        <p id="ContactUs" class="home" style="display:none" > but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>   
+        <p id="AboutUs" class="home" style="display:none"> It is a long established fact that a </p>
+    </div>    
+    <script>
+    function opentab(mylink) {
+    var x = document.getElementsByClassName("home");
+    for ( var i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(mylink).style.display = "block";  
+}
+    </script>    
+</body>
+</html>
