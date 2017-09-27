@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.accordin
+{
+    width:100%;
+    background-color: gray;
+    font-size:25px;
+    padding:10px;
+    text-align: left;
+    border:1px solid gray;
+    color:white;
+    cursor:pointer;
+    }
+.accordin:hover
+{
+    background-color: lightgrey;
+}
+div.panel
+{
+display: none;
+padding:0px 18px;
+}
+</style>   
+<body>
+    <h2>Accordin</h2>
+    <button class = "accordin">section1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet ultrices pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam varius ultricies elementum. Vestibulum pretium ut enim mattis rutrum. Fusce ac massa a quam aliquam ultricies condimentum et tortor</p>
+    </div>   
+    <button class = "accordin">section1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet ultrices pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam varius ultricies elementum. Vestibulum pretium ut enim mattis rutrum. Fusce ac massa a quam aliquam ultricies condimentum et tortor</p>
+    </div>   
+    <button class = "accordin">section1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet ultrices pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam varius ultricies elementum. Vestibulum pretium ut enim mattis rutrum. Fusce ac massa a quam aliquam ultricies condimentum et tortor</p>
+    </div>  
+    <script>
+/*var acc=document.getElementsByClassName("accordin")
+var i;
+for(i=0;i<acc.length;i++)
+{
+acc[i].onclick=function()
+{
+    this.classList.toggle("active");
+    var x =this.nextElementSibling;
+    if(x.style.display === "block")
+    {
+        x.style.display = "none"
+    }
+    else
+    {
+        x.style.display = "block"
+    }
+ }
+}*/
+var acc= document.getElementsByClassName("accordin")
+for(var i=0;i<acc.length;i++)
+{
+acc[i].onclick = function()
+{
+    this.classList.add("active");
+    var x = this.nextElementSibling;
+    if(x.style.display === "block")
+    {
+        x.style.display = "none";
+
+    }
+    else{
+        x.style.display = "block";
+    }
+}
+}
+    </script> 
+</body>
+</html>
